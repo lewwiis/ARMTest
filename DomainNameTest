@@ -20,6 +20,7 @@
 	"steps": [],
 	"outputs": 
 	{
-      "location": "[location()]"
+      "location": "[location()]",
+	  "dname": "[basics('domainName')]"
 	}
 }
