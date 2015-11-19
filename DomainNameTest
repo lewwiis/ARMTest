@@ -4,23 +4,13 @@
 	"parameters": 
 	{
 		"basics": [
-		{
-			"name": "domainName",
-        "type": "Microsoft.Common.TextBox",
-        "label": "Domain name",
-        "constraints": 
-			{
-          "required": true,
-          "regex": "^[a-z0-9A-Z]{1,10}$",
-          "validationMessage": "Only letters and numbers are allowed, and the value must be 1-10 characters long."
-			}
-		}
 		],
 	"steps": [],
 	"outputs": 
 	{
       "location": "[location()]",
 	  "dname": "[basics('domainName')]"
+	
 	}
 	}
 }
