@@ -15,12 +15,12 @@
           "validationMessage": "Only letters and numbers are allowed, and the value must be 1-10 characters long."
 			}
 		}
-		]
-	},
+		],
 	"steps": [],
 	"outputs": 
 	{
       "location": "[location()]",
 	  "dname": "[basics('domainName')]"
+	}
 	}
 }
