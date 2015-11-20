@@ -1,0 +1,52 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webAppName": {
+      "value": "ExampleWebAppWithSQL"
+    },
+    "hostingPlanName": {
+      "value": "NewServiceAppPlan"
+    },
+	"sku":{
+	  "type":"string",
+	  "allowedValues":[
+		"Free",
+		"Shared",
+		"Basic",
+		"Standard"
+	  ],
+	  "defaultValue":"Standard"
+	},
+	"workerSize":{
+	  "type":"string",
+	  "allowedValues":[
+		"0",
+		"1",
+		"2"
+	  ],
+	  "defaultValue":"0"
+	},
+    "siteLocation": {
+      "value": "West US"
+    },
+    "serverName": {
+      "value": "NewServer"
+    },
+    "serverlocation": {
+      "value": "West US"
+    },
+    "administratorLogin": {
+      "value": "NewAdmin"
+    },
+    "administratorLoginPassword": {
+      "value": "NotSecurePassword"
+    },
+    "sqlVMSize": {
+      "value": "ExampleDatabase"
+    },
+	"databaseName": {
+      "value": "ExampleDatabase"
+    }
+  }
+}
