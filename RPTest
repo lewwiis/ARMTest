@@ -49,7 +49,9 @@
                 "required": true
             }
           }
-        ],
+        ]
+		},
+		{  
 		"name": "sqlConfig",
         "label": "SQL Server settings",
         "subLabel": {
