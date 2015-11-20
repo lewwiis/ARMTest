@@ -1,0 +1,63 @@
+{
+  "handler": "Microsoft.Compute.MultiVm",
+  "version": "0.0.1-preview",
+  "parameters": {
+    "basics": [
+      {
+        "name": "domainName",
+        "type": "Microsoft.Common.TextBox",
+        "label": "Domain name",
+        "constraints": {
+          "required": true,
+          "regex": "^[a-z0-9A-Z]{1,10}$",
+          "validationMessage": "Only letters and numbers are allowed, and the value must be 1-10 characters long."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "name": "infrastructureConfig",
+        "label": "Infrastructure settings",
+        "subLabel": {
+          "preValidation": "Configure the infrastructure settings",
+          "postValidation": "Done"
+        },
+        "bladeTitle": "Infrastructure settings",
+		"bladeSubTitle": "",
+        "elements": [
+          {
+            "name": "adminUsername",
+            "type": "Microsoft.Compute.UserNameTextBox",
+            "label": "Username",
+            "toolTip": "Admin username for the virtual machines and the Active Directory domain.",
+            "osPlatform": "Windows",
+            "constraints": {
+                "required": true
+            }
+          },
+          {
+            "name": "adminPassword",
+            "type": "Microsoft.Compute.CredentialsCombo",
+            "label": {
+              "password": "Password",
+              "confirmPassword": "Confirm password"
+            },
+            "toolTip": {
+              "password": "Admin password for the virtual machines."
+            },
+            "osPlatform": "Windows",
+            "constraints": {
+                "required": true
+            }
+          }
+        ]
+		}
+		],
+		"outputs": 
+		{
+		  "location": "[location()]",
+		  "dname": "[basics('domainName')]"
+	
+		}
+		}
+		}
