@@ -124,7 +124,6 @@
       "domainName": "[basics('domainName')]",
       "adminUsername": "[steps('infrastructureConfig').adminUsername]",
       "adminPassword": "[steps('infrastructureConfig').adminPassword.password]",
-      "virtualNetworkName": "[steps('infrastructureConfig').virtualNetworkName]",
       "adVmSize": "[steps('adConfig').adVmSize]",
       "sqlVMSize": "[steps('sqlConfig').sqlVmSize]",
       "sqlServerServiceAccountUserName": "[steps('sqlConfig').sqlServerServiceAccountUsername]",
